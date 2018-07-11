@@ -1,14 +1,18 @@
 %include('header.tpl', title='TopPage')
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
     <span style="font-size:40px">Automation</span>
-    <form>
+  <form action="/auto" method="POST">
   <div class="form-group">
-    <label for="ASN">ASN</label>
-    <input type="text" class="form-control" id="ASN" placeholder="ASN">
+    <label for="TARGET">TARGET</label>
+    <input type="text" class="form-control" name="TARGET" id="TARGET" placeholder="TARGET">
   </div>
   <div class="form-group">
-    <label for="IX">IX</label>
-    <select class="form-control" id="IPv4IPv6">
+    <label for="ASN">ASN</label>
+    <input type="text" class="form-control" name="ASN" id="ASN" placeholder="ASN">
+  </div>
+  <div class="form-group">
+    <label for="IXID">IX</label>
+    <select class="form-control" name="IXID" id="IXID">
         <option value=145>JPNAPOS</option>
         <option value=564>JPIXOS</option>
         <option value=95>JPNAPTY</option>
@@ -17,20 +21,19 @@
   </div>
   <div class="form-group">
     <label for="Password">Password</label>
-    <input type="text" class="form-control" id="PASSWORD" placeholder="Password">
+    <input type="text" class="form-control" id="PASSWORD" name="PASSWORD" placeholder="Password">
   </div>
   <div class="form-group">
     <label for="In-Policy">In-Policy</label>
-    <input type="text" class="form-control" id="INPOLICY" placeholder="In-Policy">
+    <input type="text" class="form-control" id="INPOLICY" name="INPOLICY" placeholder="In-Policy">
   </div>
   <div class="form-group">
     <label for="In-Policy">Ipv4 / Ipv6</label>
-    <select class="form-control" id="IPv4IPv6">
+    <select class="form-control" id="IPV" name="IPV">
         <option value=4>Ipv4</option>
         <option value=6>Ipv4</option>
     </select>
   </div>
-
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
