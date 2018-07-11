@@ -37,6 +37,11 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+<pre>
+{{result}}
+</pre>
+
+
 </main>
 </div>
 </div>
