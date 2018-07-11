@@ -1,0 +1,10 @@
+router bgp {{ my_asn }}
+  neighbor {{ remote_ip }} remote-as {{ remote_asn }}
+  neighbor {{ remote_ip }} remove-private-as
+  neighbor {{ remote_ip }} description {{ remote_asn }}_{{ ix_name }}_{{ c_name }}_{{ v4v6 }}
+  neighbor {{ remote_ip }} soft-reconfiguration inbound all
+  neighbor {{ remote_ip }} timers 30 90
+  neighbor {{ remote_ip }} route-map Policy_{{ remote_asn }} in
+  neighbor {{ remote_ip }} route-map {{ ix_name }}_{{ v4v6 }} out
+  neighbor {{ remote_ip }} password 0 {{ pass }}
+  neighbor {{ remote_ip }} maximum-routes 10000

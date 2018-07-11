@@ -1,0 +1,4 @@
+- name: load configuration from file
+  eos_config:
+    src: templates/eos.j2
+  when: os_type == "eos"
