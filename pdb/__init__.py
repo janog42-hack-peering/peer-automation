@@ -10,6 +10,8 @@ def get_peer_info(asn=0, ix_id=0):
     r = requests.get(base_url+'net', params)
     id = r.json()['data'][0]['id']
     r = requests.get(base_url+'net/'+str(id))
+    ixs = []
     for ix in r.json()['data'][0]['netixlan_set']:
         if ix['ix_id'] == ix_id:
-            return ix
+            ixs.append(ix)
+    return ixs
