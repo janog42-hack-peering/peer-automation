@@ -1,7 +1,6 @@
 ---
 - hosts: eos
+  connection: httpapi
   gather_facts: false
-  vars:
-    os_type: "eos"
   roles:
     - run-command

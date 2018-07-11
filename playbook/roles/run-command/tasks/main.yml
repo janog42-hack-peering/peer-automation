@@ -1,4 +1,6 @@
 - name: load configuration from file
+  become: yes
+  become_method: enable
   eos_config:
     src: templates/eos.j2
-  when: os_type == "eos"
+  when: ansible_network_os == "eos"

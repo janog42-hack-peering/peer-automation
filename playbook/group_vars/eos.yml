@@ -1,0 +1,6 @@
+ansible_connection: httpapi
+ansible_network_os: eos
+ansible_user: arista
+ansible_ssh_pass: arista123
+become: yes
+become_method: enable
