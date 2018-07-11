@@ -1,9 +1,6 @@
 from bottle import route, run
 from socket import gethostname, gethostbyname
 
-
-
-
 def bgpsummary():
     return("result")
 
