@@ -31,7 +31,7 @@
     <label for="In-Policy">Ipv4 / Ipv6</label>
     <select class="form-control" id="IPV" name="IPV">
         <option value=4>Ipv4</option>
-        <option value=6>Ipv4</option>
+        <option value=6>Ipv6</option>
     </select>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
